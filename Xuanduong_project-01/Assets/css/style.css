@@ -4,6 +4,9 @@
 *{
     box-sizing: border-box;
 }
+html,body{
+    scroll-behavior: smooth;
+}
 html{
     font-size: 62.5%;
 }
@@ -42,15 +45,24 @@ a{
     margin-right: auto;
 }
 /* Header */
-.header{
+.fix-header{
+    background-color:  #E6F0FF;
+    padding-top: 26px;
+    position: sticky;
+    top:-26px;
+    z-index: 1;
+}
+.hero-wrap{
+    display: flex;
+    align-items: center;
     position: relative;
     background-color: #E6F0FF;
-    height: 100vh;
+    height: calc(100vh - 90px);
 }
 .navbar{
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
 }
 .navbar ul{
     display: flex;
@@ -85,7 +97,6 @@ a{
     opacity: 0.8;
 }
 .hero{
-    margin-top: 130px;
     width: 51%;
 }
 .hero .sub-title{
@@ -151,12 +162,9 @@ height: 91px;
 display: flex;
 justify-content: center;
 align-items: center;
-
-
-    
 }
 .client .images img{
-    width: auto;
+    width: 100%;
     height: 32px;
     object-fit: contain;
     
@@ -552,6 +560,10 @@ align-items: center;
     width: 28px;
     height: 28px;
     border-radius: 4px;
+    background-color: #fff;
+}
+.social .social-link:not(:first-child){
+    margin-left: 16px;
 }
 .social .social-link:hover{
     background-color: #ddd;
